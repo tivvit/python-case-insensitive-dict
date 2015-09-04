@@ -35,6 +35,18 @@ class CaseInsensitiveDict():
     def __len__(self):
         return len(self._data)
 
+    def __eq__(self, other):
+        if isinstance(other, dict):
+            other = CaseInsensitiveDict(other)
+        else:
+            raise NotImplementedError
+
+        # Compare insensitively
+        return dict(self.items()) == dict(other.items())
+
+    def __repr__(self):
+        return str(self._data)
+
     def get(self, key, default=None):
         if not key.lower() in self:
             return default
@@ -65,14 +77,9 @@ class CaseInsensitiveDict():
         for v in self._data.itervalues():
             yield v
 
-    def __eq__(self, other):
-        if isinstance(other, dict):
-            other = CaseInsensitiveDict(other)
-        else:
-            raise NotImplementedError
+    def update(self, dictionary):
+        if not isinstance(dictionary, dict):
+            raise TypeError
 
-        # Compare insensitively
-        return dict(self.items()) == dict(other.items())
-
-    def __repr__(self):
-        return str(self._data)
+        for k, v in dictionary.items():
+            self[k] = v

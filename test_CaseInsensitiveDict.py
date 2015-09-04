@@ -83,5 +83,15 @@ class TestLowercaseDict(unittest.TestCase):
     def test_compare(self):
         self.assertTrue({"a": 1, "B": 2} == CaseInsensitiveDict({"A": 1, "b": 2}))
 
+    def test_update(self):
+        cid = CaseInsensitiveDict({"A": 1, "b": 2})
+        cid.update({"A": 2})
+        self.assertEquals("{'a': 2, 'b': 2}", str(cid))
+
+    def test_update_nested(self):
+        cid = CaseInsensitiveDict({"A": 1, "b": 2})
+        cid.update({"A": {"C": 3}})
+        self.assertEquals("{'a': {'c': 3}, 'b': 2}", str(cid))
+
 if __name__ == '__main__':
     unittest.main()
