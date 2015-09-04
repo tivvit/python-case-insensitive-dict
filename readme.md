@@ -1,4 +1,7 @@
 # Python case insensitive dictionary
+
+* supports nested dicts
+
 ### Example
 
 ```python
