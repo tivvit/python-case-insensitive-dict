@@ -78,7 +78,8 @@ class CaseInsensitiveDict():
             yield v
 
     def update(self, dictionary):
-        if not isinstance(dictionary, dict):
+        if not (isinstance(dictionary, dict) or
+                isinstance(dictionary, CaseInsensitiveDict)):
             raise TypeError
 
         for k, v in dictionary.items():
