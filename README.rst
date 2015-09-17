@@ -9,7 +9,7 @@ Python case insensitive dictionary
 Example
 ~~~~~~~
 
-::
+.. code-block:: python
 
     from CaseInsensitiveDict import CaseInsensitiveDict
 
