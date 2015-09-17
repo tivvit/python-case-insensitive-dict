@@ -40,11 +40,13 @@ class CaseInsensitiveDict():
     def __eq__(self, other):
         if isinstance(other, dict):
             other = CaseInsensitiveDict(other)
+        elif isinstance(other, CaseInsensitiveDict):
+            pass
         else:
             raise NotImplementedError
 
         # Compare insensitively
-        return dict(self.items()) == dict(other.items())
+        return self.items() == other.items()
 
     def __repr__(self):
         return str(self._data)
