@@ -55,7 +55,7 @@ class TestLowercaseDict(unittest.TestCase):
         self.assertEqual({'a': {'b': 2}}, dict(cid.items()))
 
     def test_iteration(self):
-        self.assertEqual(["a", "b"], [k for k in self.cid])
+        self.assertEqual(["a", "b"], sorted([k for k in self.cid]))
 
     def test_has_key_a(self):
         self.assertTrue(self.cid.has_key("A"))
@@ -75,13 +75,13 @@ class TestLowercaseDict(unittest.TestCase):
         self.assertEqual(1, self.cid.get("C", 1))
 
     def test_items(self):
-        self.assertEqual([('a', {'a': {'a': 3}}), ('b', 2)], self.cid.items())
+        self.assertEqual([('a', {'a': {'a': 3}}), ('b', 2)], sorted(self.cid.items(), key=lambda x: x[0]))
 
     def test_keys(self):
-        self.assertEqual(["a", "b"], self.cid.keys())
+        self.assertEqual(["a", "b"], sorted(self.cid.keys()))
 
     def test_vals(self):
-        self.assertEqual([{'a': {'a': 3}}, 2], self.cid.values())
+        self.assertEqual([{'a': {'a': 3}}, 2], sorted(self.cid.values()))
 
     def test_compare(self):
         self.assertTrue({"a": 1, "B": 2} == CaseInsensitiveDict({"A": 1, "b": 2}))
