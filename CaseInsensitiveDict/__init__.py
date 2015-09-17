@@ -1,3 +1,1 @@
-__author__ = 'tivvit'
-
-from CaseInsensitiveDict import CaseInsensitiveDict
+from CaseInsensitiveDictionary import CaseInsensitiveDict
