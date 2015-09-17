@@ -81,7 +81,9 @@ class TestLowercaseDict(unittest.TestCase):
         self.assertEqual(["a", "b"], sorted(self.cid.keys()))
 
     def test_vals(self):
-        self.assertEqual([{'a': {'a': 3}}, 2], sorted(self.cid.values()))
+        # or is used because various versions of python are not consistent in order of dict conversion
+        self.assertTrue([{'a': {'a': 3}}, 2] == self.cid.values() or
+                        [{'a': {'a': 3}}, 2] == self.cid.values())
 
     def test_compare(self):
         self.assertTrue({"a": 1, "B": 2} == CaseInsensitiveDict({"A": 1, "b": 2}))
