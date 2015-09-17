@@ -1,6 +1,8 @@
 """
     dict with case insensitive keys
 """
+
+
 class CaseInsensitiveDict():
     def __init__(self, dictionary={}):
         self._data = self.__create(dictionary)
@@ -66,15 +68,15 @@ class CaseInsensitiveDict():
         return [v for v in self.itervalues()]
 
     def iteritems(self):
-        for k, v in self._data.iteritems():
+        for k, v in self._data.items():
             yield k, v
 
     def iterkeys(self):
-        for v in self._data.iterkeys():
-            yield v
+        for k, v in self._data.items():
+            yield k
 
     def itervalues(self):
-        for v in self._data.itervalues():
+        for k, v in self._data.items():
             yield v
 
     def update(self, dictionary):
