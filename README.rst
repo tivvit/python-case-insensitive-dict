@@ -4,6 +4,7 @@ Python case insensitive dictionary
 .. image:: https://api.travis-ci.org/tivvit/python-case-insensitive-dict.svg?branch=master
 .. image:: https://img.shields.io/github/license/tivvit/python-case-insensitive-dict.svg
 
+* implements all standard dictionary methods
 * supports nested dicts
 * this implementation does not preserve original key case
 
