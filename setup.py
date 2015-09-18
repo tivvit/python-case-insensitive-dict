@@ -27,7 +27,7 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: pypy',
+        'Programming Language :: Python :: Implementation :: PyPy',
     ],
     keywords='dict dictionary case-insensitive',
     packages=["CaseInsensitiveDict"],
