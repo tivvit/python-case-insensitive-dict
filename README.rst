@@ -1,10 +1,18 @@
 Python case insensitive dictionary
 ==================================
+.. image:: https://img.shields.io/pypi/v/CaseInsensitiveDict.svg
 .. image:: https://api.travis-ci.org/tivvit/python-case-insensitive-dict.svg?branch=master
 .. image:: https://img.shields.io/github/license/tivvit/python-case-insensitive-dict.svg
 
 * supports nested dicts
 * this implementation does not preserve original key case
+
+Install
+~~~~~~~
+
+.. code-block:: python
+
+    pip install CaseInsensitiveDict
 
 Example
 ~~~~~~~
