@@ -1,1 +1,1 @@
-from CaseInsensitiveDictionary import CaseInsensitiveDict
+from .CaseInsensitiveDict import CaseInsensitiveDict

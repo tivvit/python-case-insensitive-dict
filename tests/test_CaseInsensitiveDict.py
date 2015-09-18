@@ -1,4 +1,5 @@
 import unittest
+
 from CaseInsensitiveDict import CaseInsensitiveDict
 
 
