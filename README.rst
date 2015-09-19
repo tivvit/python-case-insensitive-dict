@@ -1,6 +1,7 @@
 Python case insensitive dictionary
 ==================================
 .. image:: https://img.shields.io/pypi/v/CaseInsensitiveDict.svg
+.. image:: https://img.shields.io/pypi/wheel/CaseInsensitiveDict.svg
 .. image:: https://api.travis-ci.org/tivvit/python-case-insensitive-dict.svg?branch=master
 .. image:: https://img.shields.io/github/license/tivvit/python-case-insensitive-dict.svg
 
